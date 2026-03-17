@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input</title>
+  </head>
+  <body>
+
+    <input placeholder="Name" class="js-input" 
+    onkeydown="
+    if(event.key==='Enter'){
+      SubmitFunction();
+    }"
+    >
+    <button onclick="SubmitFunction()">Submit</button>
+    <p class="js-para"></p>
+    <script>
+       function SubmitFunction(){
+         const name = document.querySelector('.js-input').value
+         document.querySelector('.js-para').innerHTML=`Your name is: ${name}`;  
+       }
+    </script>
+  </body>
+</html>

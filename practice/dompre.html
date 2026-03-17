@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM-pre</title>
+  </head>
+  <body>
+    <button class="js-button"
+    onclick="
+    changeText();
+    "
+    >
+      hello
+    </button>
+    
+    <script>
+      function changeText(){
+        const buttonValue=document.querySelector('.js-button');
+       if(buttonValue.innerText==='hello'){
+          buttonValue.innerText='bye';
+       }
+       else{
+        buttonValue.innerText='hello';
+       }
+      }
+     
+        
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array and Loop</title>
+  </head>
+  <body>
+    <script>
+    const Array1=['hello','world','search','good'];
+    let foundIndex=-1;
+    for(let i=0;i<Array1.length;i++){
+      
+      if(Array1[i]==='search'){
+          foundIndex=i;
+          break;
+      }
+     }
+      console.log(foundIndex);
+    
+
+    function findIndex(array2,word){
+      let foundIndex=-1;
+      for(let i=0;i<array2.length;i++){
+        if(array2[i]===word){
+          foundIndex=i;
+          break;
+          return foundIndex;
+        }
+      }
+      return foundIndex;
+    }
+
+    console.log(findIndex(['green','red','blue','red'],'blue'));
+
+
+//remove egg
+
+    function removeEgg(foods){
+      filterFood=[];
+      let eggCount=0;
+      for(let i=0;i<foods.length;i++)
+    {
+      if(foods[i]==='egg' && eggCount<2){
+        eggCount++;
+        continue;
+      }
+      filterFood.push(foods[i]);
+    }
+    return filterFood;
+    }
+
+    console.log(removeEgg(['egg','apple','egg','ham','bun','egg']))
+
+  //remove egg upto 2
+     function removeEgg2(foods){
+      filterFood=[];
+      for(let i=0;i<foods.length;i++)
+    {
+      if(foods[i]==='egg'){
+        continue;
+      }
+      filterFood.push(foods[i]);
+    }
+    return filterFood;
+    }
+
+   
+    console.log(removeEgg2(['egg','apple','egg','ham','bun','egg']))
+
+    
+
+
+    </script>
+  </body>
+</html>

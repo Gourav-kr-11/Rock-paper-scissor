@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <body>
+    <button>
+      hello
+    </button>
+    <button class="js-button">
+      second button
+    </button>
+    <script>
+       //document.querySelector -let us get any element from the page and put it inside JavaScript
+
+       console.log(document.querySelector('button'));
+
+       console.log(document.querySelector('button').innerHTML);
+
+       document.querySelector('button')
+        .innerHTML='Changed';
+
+      const buttonElement =document
+      .querySelector('.js-button');
+
+      console.log(buttonElement);
+
+
+
+
+     /*  
+      //Document Object Model (DOM)
+
+      console.log(document.title);
+      console.log(document.body);
+
+      document.body.innerHTML='hello';
+       document.title='Good JOB';
+
+      */
+
+
+
+    </script>
+  </body>
+</html>

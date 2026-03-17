@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Gaming
+    </title>
+
+    <style>
+      .is-gaming-on{
+        padding: 12px 15px;
+        background-color: black;
+        color: white;
+        font-family: Arial;
+        border-radius: 7px;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+      }
+
+      .is-toggled{
+        background-color: rgb(236, 234, 234);
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+    
+    class="is-gaming-on js-button"
+    onclick="
+    const button=document.querySelector('.js-button');
+    if(!button.classList.contains('is-toggled')){
+      button.classList.add('is-toggled');
+      
+    }
+    else{
+      button.classList.remove('is-toggled');
+    }
+    "
+    >Gaming</button>
+
+    <button 
+    class="is-gaming-on js-button2"
+    onclick="
+    const button2=document.querySelector('.js-button2');
+
+    if(!button2.classList.contains('is-toggled')){
+      button2.classList.add('is-toggled');
+    
+    }
+    else{
+      button2.classList.remove('is-toggled');
+    }
+    "
+    >Music</button>
+
+    <script>
+ 
+    </script>
+  </body>
+</html>

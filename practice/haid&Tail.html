@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM-pre</title>
+  </head>
+  <body>
+    <button onclick="
+      HeadFunction()" >Head</button>
+    <button onclick="
+     TailFunction()">Tail</button>
+    <p class="js-choice"></p>
+    <script>    
+     function HeadFunction(){
+      document.querySelector('.js-choice').innerHTML='You SELECTED Head';
+     }
+
+     function TailFunction(){
+      document.querySelector('.js-choice').innerHTML='You Selected tail';
+     }
+       
+    </script>
+  </body>
+</html>
