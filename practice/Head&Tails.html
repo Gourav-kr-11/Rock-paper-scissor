@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+       Head&Tails
+    </title>
+  </head>
+  <body>
+    <button onclick="
+    playGame('head')  
+    ">
+      Head
+    </button>
+
+
+    <button onclick="
+    playGame('tail')  
+    ">
+     Tail
+    </button>
+
+    <button onclick="
+    score.wins=0;
+    score.losses=0;
+    
+    localStorage.removeItem('score');
+    ">
+      Reset Score
+    </button>
+    
+    <script>
+      const score =JSON.parse(localStorage.getItem('score'))||{
+          wins:0,
+          losses:0,
+         
+        };
+
+     function playGame(playerMove){
+         const computerMove=getGuess();
+         let result='';
+
+         
+            if(playerMove===computerMove){
+              result='You Win';
+            }
+            else{
+              result='You Lose';
+            }
+
+             if(result==='You Win'){
+            score.wins+=1;
+          }
+          else if(result==='You Lose'){
+            score.losses+=1;
+          }
+         
+
+          localStorage.setItem('score',JSON.stringify(score));
+          
+          alert(`You picked ${playerMove} , coin was ${computerMove} ${result} 
+          \n Wins: ${score.wins}, Losses: ${score.losses}`);
+     }
+
+
+      function getGuess(){
+        let guessMoves=''; 
+        
+          
+      const number=Math.random();
+      if(number>=0 && number<1/2){
+        return'head';
+      }
+      else if(number>=1/2 && number<1){
+       return 'tail';
+      }
+      
+      }
+     
+      
+    </script>
+  </body>
+</html>

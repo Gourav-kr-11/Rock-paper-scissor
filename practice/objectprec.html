@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OBjectPRep</title>
+  </head>
+  <body>
+    <script>
+      const basketBall={
+
+        name:'Basketball',
+        price:'2095 cents',
+      }
+
+      basketBall.price='2596 cents';
+      basketBall['delivery-time']='2 days';
+
+      console.log(basketBall);
+
+
+      const product1={
+        name:'Tennis Ball',
+        price:'1995 cents',
+      }
+      
+      const product2={
+        name:'Football',
+        price:'2995 cents',
+      }
+
+      function fun(){
+        if(product1.price<product2.price){
+          return product2.name;
+        }
+        else{
+          return product1.name;
+        }
+      }
+      console.log(fun());
+
+
+
+      console.log('HELLO'.toLowerCase());
+      console.log('hello'.repeat(10));
+    </script>
+  </body>
+</html>

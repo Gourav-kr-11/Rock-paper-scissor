@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>
+    Array and Loops
+   </title>
+   </head>
+   <body>
+    <script>
+      const myArray=[10,20,30];
+      myArray[myArray.length-1]=99;
+      console.log(myArray);
+     
+
+      // Swap Array
+
+
+      const myArray2 = [1, 20, 22, 24, 5];
+        function arraySwap() {
+          let n = myArray2.length - 1;
+          let temp = myArray2[0];
+          myArray2[0] = myArray2[n];
+          myArray2[n] = temp;
+        }
+        arraySwap(myArray2);
+        console.log(myArray2);
+
+
+        // add+2
+
+        let i=0;
+        while(i<=10){
+        
+        console.log(i);
+        i+=2;
+        }
+
+        const array3=[1,2,3];
+        const result=[];
+        for(let i=0;i<array3.length;i++){
+          result.push(array3[i]+1)
+        }
+        console.log(result);
+        
+        
+        // Add one 
+
+        function addOne(array){
+          const result1=[];
+          for(let i=0;i<array.length;i++){
+            result1.push(array[i]+1);
+          }
+          return result1;
+        }
+       console.log(addOne([-10,23,232]))
+
+
+       //Add number
+
+       function addNum(array,num){
+        const result2=[];
+        for(let i=0;i<array.length;i++){
+          result2.push(array[i]+num)
+        }
+        return result2;
+       }
+
+       console.log(addNum([10,23,43],2))
+
+       //Add Array
+
+
+       function AddArray(array1,array2){
+        const result3=[];
+        for(let i=0;i<array1.length;i++){
+           result3.push(array1[i]+array2[i]);
+        }
+        return result3;
+       }
+
+       console.log(AddArray([10,20,30],[12,13,14]))
+      
+
+
+       // postive function Array
+       function positiveNum(nums){
+         const result4=[];
+         for(let i=0;i<nums.length;i++){
+          if(nums[i]>0){
+            result4.push(nums[i]);
+          }
+         }
+         return result4.length;
+       }
+
+       console.log(positiveNum([1,2,-3,7,-8]));
+
+
+
+       //Min Max
+       function minMax(nums2){
+        let min=nums2[0];
+        let max=nums2[0];
+        for(let i=1;i<nums2.length;i++){
+          if(nums2.length===0){
+            return [];
+          }
+          if(nums2.length===1){
+            return [nums2[0],nums2[0]];
+          }
+          if(min>nums2[i]){
+            min=nums2[i];
+          }
+          if(max<nums2[i]){
+            max=nums2[i];
+          }
+        }
+        return [min,max];
+
+        
+       }
+       console.log(minMax([10,2,3,1]))
+
+
+       // Count Words
+    function countWords(words){
+          let counts = {};
+          for(let i=0; i < words.length; i++){
+            let word = words[i];
+            counts[word] = (counts[word] || 0) + 1;
+          }
+          return counts;
+        }
+
+        console.log(countWords(['aa', 'aab', 'aa', 'aab', 'aa'])); 
+        // Output: { aa: 3, aab: 2 }
+
+
+    </script>
+  </body>
+</html>

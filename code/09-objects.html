@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+       Objects
+    </title>
+  </head>
+  <body>
+    
+    <script>
+      /* const product={
+        //property:{value};(proverty value pair)
+
+
+        name: 'T-Shirt',
+        price:3000,
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name='Shirt';
+      console.log(product);
+
+      product.newProperty=true;
+      console.log(product);
+      
+      delete product.newProperty;
+      console.log(product); */
+
+
+/*
+      const product2={
+        name:'shirt',
+        rating:{
+          stars:4.5,
+          count:87
+        },
+
+        fun: function funtion1(){
+          console.log('Function inside object');
+        }
+      };
+      console.log(product2.name);
+      console.log(product2['name']); 
+      console.log(product2.rating.stars);
+      product2.fun();
+
+      //JSON is more universal(JAva script object notation)
+      console.log(JSON.stringify(product2))
+
+
+      // To covert back it we use parse function with the input of json string
+      const jsonString=JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+*/
+
+     console.log('hello'.length);
+     console.log('hello'.toUpperCase());
+     
+
+     //Reference
+
+     const object1={
+      message: 'hello'
+     };
+
+     //it does not create a new object rather it creates a reference to the same object
+     const object2=object1;
+
+     object1.message='hi';
+     console.log(object1.message);
+     //it will print hi even after it is in const variable because it is actually a reference to the same object in memory
+
+
+     console.log(object2);
+     //it will also print hi because both object1 and object2 are reference to the same object in memory
+
+     const object3={
+      message: 'hi'
+     };
+      console.log(object1===object3);
+      //it will print false because both are different objects in memory even though they have same properties and values due to different references
+
+      console.log(object1===object2);
+      //it will print true because both are reference to the same object in memory
+
+
+      const object4={
+        message:'Good Job!',
+        price:799
+      }
+      /*const message = object4.message;
+      can be also witten as*/
+      const {message, price}=object4;
+      //destructuring assignment
+      console.log(message);
+      console.log(price);
+
+      const object5={
+       // message:message
+       message,
+      /* method: function function1(){
+         console.log('method');
+       }*/
+       method(){
+        console.log('method');//shorthand way to write method in object
+       }
+      }
+      console.log(object5);
+      
+      object5.method();
+
+    </script>
+
+  </body>
+</html>
