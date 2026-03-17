@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/code/13-rock-paper-scissor.html"
+    }
+  ]
+}
